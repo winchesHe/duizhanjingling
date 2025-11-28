@@ -35,7 +35,7 @@ function App() {
   const handleGenerateTotal = () => {
     const allOutputs = formItems.map(item => {
       const orderedValues = outputOrder.map(index => item.values[index] || '');
-      return orderedValues.join(',');
+      return orderedValues.join('，');
     });
     setTotalOutput(allOutputs.join('|'));
   };
@@ -146,7 +146,7 @@ function App() {
             className="total-output-content"
             value={totalOutput}
             onChange={(e) => setTotalOutput(e.target.value)}
-            placeholder="请输入或粘贴总内容，用 | 分隔多个表单项，用 , 分隔每个表单项的值"
+            placeholder="请输入或粘贴总内容，用 | 分隔多个表单项，用 ， 分隔每个表单项的值"
             rows={4}
           />
           <Space style={{ marginTop: 15 }}>
